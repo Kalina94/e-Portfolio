@@ -101,9 +101,12 @@ input, select, textarea {
 	body {
 		background-color: #2e3141;
 		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-		background-size: auto, cover;
-		background-attachment: fixed, fixed;
-		background-position: center, center;
+		background-size: auto,
+ cover;
+		background-attachment: fixed,
+ fixed;
+		background-position: center,
+ center;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3464,8 +3467,10 @@ input, select, textarea {
 				padding: 7em 0 8.25em 0 ;
 				background-color: #2e3141;
 				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-				background-size: auto, cover;
-				background-position: center, center;
+				background-size: auto,
+ cover;
+				background-position: center,
+ center;
 				margin-bottom: -6.5em;
 			}
 
@@ -3574,8 +3579,10 @@ input, select, textarea {
 			padding: 9em 0 6.25em 0 ;
 			background-color: #2e3141;
 			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-			background-size: auto, cover;
-			background-position: center, 0% 30%;
+			background-size: auto,
+ cover;
+			background-position: center,
+ 0% 30%;
 			margin-bottom: -6.5em;
 		}
 
@@ -3585,8 +3592,10 @@ input, select, textarea {
 
 		#wrapper > header {
 			padding: 11em 3em 7.375em 3em ;
-			background-size: auto, cover;
-			background-position: center, 0% 0%;
+			background-size: auto,
+ cover;
+			background-position: center,
+ 0% 0%;
 			margin-bottom: -4.75em;
 		}
 
@@ -3600,7 +3609,8 @@ input, select, textarea {
 
 		#wrapper > header {
 			padding: 6.5em 2em 3em 2em ;
-			background-size: auto, 125%;
+			background-size: auto,
+ 125%;
 			margin-bottom: -2.5em;
 		}
 
@@ -3796,7 +3806,7 @@ input, select, textarea {
 			}
 
 				.wrapper.spotlight .image img {
-					border-radius: 100%;
+					
 					width: 100%;
 				}
 
@@ -4062,8 +4072,10 @@ input, select, textarea {
 		#footer {
 			background-color: #2e3141;
 			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-			background-size: auto, cover;
-			background-position: center, center;
+			background-size: auto,
+ cover;
+			background-position: center,
+ center;
 			margin-top: -6.5em;
 			padding-top: 6.5em;
 		}
@@ -4142,3 +4154,155 @@ input, select, textarea {
 		}
 
 	}
+	
+	
+	
+	/* css variables */
+:root {
+	--width-A: 100px;
+	--width-B: calc(var(--width-A) / 2);
+	--width-C: calc(50% - var(--width-B));
+	--color-1: #27f;
+	--color-1a: #05d;
+	--color-2: #eee;
+	--color-3: #ddd;
+	--color-4: #3b1;
+	--color-4a: #280;
+	--color-5: rgba(0,0,0,0.75);
+	--modal-width: 40vw;
+	--modal-calc: calc(var(--modal-width) / 2);
+	--modal-position-x: calc(50% - var(--modal-calc));
+}
+
+/* global site styles */
+
+* {
+	margin: 0;
+	padding: 0;
+	/* outline: 1px solid red; */
+}
+
+h1, h3, p, a {
+	font-family: Helvetica, sans-serif;
+}
+
+/* buttons/links styles */
+
+.btn {
+	color: var(--color-2);
+	display: block;
+	font-weight: 600;
+	text-align: center;
+	text-decoration: none;
+}
+
+.btn-sm {
+	background-color: var(--color-5);
+	border-radius: 50%;
+	display: block;
+	padding: 5px 10px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.btn-std {
+	border-radius: 5px;
+	padding: 10px 20px;
+	width: var(--width-A);
+	transition: 1s ease-in;
+}
+
+.btn-std:hover {
+	transition: 1s ease-out;
+}
+
+.mt-link{
+	/* background-color: var(--color-1); */
+	margin: 20px var(--width-C) 0;
+}
+
+.mt-link:hover {
+	background-color: var(--color-1a);
+}
+
+.mb-link {
+	background-color: var(--color-4);
+}
+
+.mb-link:hover {
+	background-color: var(--color-4a);
+}
+
+/* site markup */
+
+.container {
+	margin: 20px auto;
+	max-width: 1200px;
+}
+
+.main-header, .random-text-header {
+	margin: 20px 0;
+	text-align: center;
+}
+
+.random-text-header {
+	margin: 20px 0 5px;
+}
+
+/* modal markup */
+
+.modal-page {
+	/* background-color: var(--color-5); */
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow-y: auto;
+}
+
+.modal-wrapper {
+	background-color: var(--color-3);
+	border-radius: 10px;
+	position: absolute;
+	left: var(--modal-position-x);
+	padding: 1%;
+	width: var(--modal-width);
+}
+
+.modal-header {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.modal-body {
+	margin: 10px 5px;
+}
+
+.modal-text {
+	padding: 10px;
+	text-align: justify;
+}
+
+/* modal show and hide */
+
+#modal-1:target {
+	display: block;
+}
+
+/* modal animation */
+
+.modal-wrapper {
+	top: -20vh;
+	animation: show 1s ease-out forwards;
+}
+
+@keyframes show {
+	0% { opacity: 0; transform: scaleX(0.05)}
+	50% { transform: translateY(55vh) scaleY(0.8); }
+	75% { transform: translateY(40vh) scaleY(1.2); }
+	90% { transform: translateY(50vh) scaleY(1) scaleX(1); }
+	100% { transform: translateY(45vh); opacity: 1; }
+}
